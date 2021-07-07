@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style-em.css">
+    <link rel="shortcut icon" href="/images/logo-icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Madic - Ensino Fundamental</title>
+</head>
+<script>
+</script>
+<body>
+    <header>
+        <a href="index.html"><img src="/images/logo1.png" alt="logo-header"></a>
+    </header>
+    <main>
+        <section>
+            <nav id="media-provas">
+                <nav id="title">
+                    <h1>Média do Ensino Fundamental</h1>
+                </nav>
+                <nav id="interdiciplinar" class="provas">
+                    <p>Coloque sua nota da avaliação interdisciplinar:</p>
+                    <input type="number" id="interdisciplinar-FUND">
+                    <a onclick="CalculoQuantoFaltaFUND()"><nav class="button-calcular">Quanto precisa</nav></a>
+                </nav>
+                <nav id="trimestral" class="provas">
+                    <p>Coloque sua nota da avaliação trimestral:</p>
+                    <input type="number" id="trimestral-FUND">
+                    <a onclick="calcularMediaProvaFUND()"><nav class="button-calcular">Calcular Média</nav></a>
+                </nav>
+            </nav>
+                <nav id="media-provas-FUND"></nav>
+            <nav id="separacao"><nav></nav></nav>
+            <nav id="media-trimestre">
+
+                <nav id="materias">
+                    <p>Matérias</p>
+                    <input list="materia-fund" name="browser" id="materias-fund">
+                      <datalist id="materia-fund">
+                        <option value="RIPT">
+                        <option value="Gramática">
+                        <option value="Matemática I">
+                        <option value="Matemática II">
+                        <option value="História">
+                        <option value="Geografia">
+                        <option value="Ciências">
+                        <option value="Química/Física">
+                        <option value="Inglês">
+                        <option value="Espanhol">
+                        <option value="Japonês">
+                        <option value="Filosofia">
+                        <option value="Arte">
+                        <option value="Empreendedorismo Maker">
+                        <option value="Informática">
+                        <option value="Robótica">
+                        <option value="Música">
+                        <option value="Projeto de Vida e Inteligência Emocional">
+                        <option value="Educação Física">
+                        <option value="Oratória">
+                        <option value="Núcleos Formativos Eletivos">
+                      </datalist>
+                  </nav>
+
+                <p>Média das provas | Nota de recuperação</p>
+                <input type="number" id="av5-FUND">
+                <p>Geekie Teste:</p>
+                <input type="number" id="av6-FUND">
+                <p>Entrega e engajamento:</p>
+                <input type="number" id="av7-FUND">
+    
+                <a onclick="mediaTrimestreFUND()"><nav id="calcular-media-tri">Calcular Média do Trimestre</nav></a>
+            </nav>
+        </section>
+            <section class="novasec"></section>
+
+        <nav id="media-trimestre-FUND"></nav>
+    </main>
+
+    <script src="/js/media-prova-fund.js"></script>
+    <script src="/js/quanto-falta-fund.js"></script>
+    <script src="/js/media-trimestre-fund.js"></script>
+</body>
+</html>
