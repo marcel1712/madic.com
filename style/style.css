@@ -109,7 +109,7 @@ body{
 }
 .button{
     background-color: #01b199;
-    width: 95%;
+    width: 90%;
     height: 4em;
     text-align: center;
     margin: auto;
@@ -130,6 +130,7 @@ a{
     color: white;
     display: contents;
 }
+
 
 @media (min-width: 1025px) {
     body{
@@ -184,17 +185,13 @@ a{
         margin: 0;
     }
     #buttons {
-        width: 55%;
+        width: 29%;
         height: 30%;
         display: flex;
         flex-direction: row;
         margin-left: 5%;
-        font-size: 1.5em;
-        margin-top: -8%;
+        font-size: 1.25em;
+        margin-top: -19%;
     }
 
-    .button{
-        height: 4.5em;
-        
-    }
 }

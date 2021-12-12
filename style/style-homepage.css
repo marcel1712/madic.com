@@ -121,7 +121,7 @@ body{
     font-weight: bold;
 }
 .button img{
-    width: 4.5em;
+    width: 30%;
 }
 .button p{
     display: flex;
@@ -139,7 +139,7 @@ a{
 }
 
 #em{
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 5%;
 }
 #efII{
@@ -148,6 +148,15 @@ a{
 #efI{
     margin-bottom: 5%;
 }
+
+.button div{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40%;
+    margin-right: 1em;
+}
+
 @media (min-width: 1025px) {
     body{
         background-image: linear-gradient(to top, #21243f, #565FC9 , #565FC9);
@@ -200,13 +209,10 @@ a{
         margin: 0;
     }
     #buttons {
-        width: 33%;
+        width: 29%;
         height: 30%;
         margin-left: 3%;
-        font-size: 1.5em;
-        margin-top: -20%;
-    }
-    .button{
-        height: 4.5em;
+        font-size: 1.25em;
+        margin-top: -19%;
     }
 }
