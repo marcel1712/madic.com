@@ -128,10 +128,45 @@ body{
     align-items: center;
     margin-left: 3em;
 }
-.button:hover{
-  background-color: rgb(2, 155, 134);
-  transition-duration: 1s;
-}
+
+.button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 3em;
+    color: white;
+    z-index: 1;
+    background: #01b199;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+   }
+   
+   .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 3.4em;
+    background-color: #5E3FDD;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   .button:hover {
+    color: #e8e8e8;
+   }
+   
+   .button:hover::before {
+    width: 100%;
+   }
+
 a{
     text-decoration: none;
     color: white;
