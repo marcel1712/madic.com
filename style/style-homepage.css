@@ -109,17 +109,24 @@ body{
 }
 .button{
     background-color: #01b199;
-    width: 95%;
+    width: 86%;
     height: 4em;
-    text-align: center;
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-content: center;
     align-items: center;
-    border-radius: 1em;
+    border-radius: 2em;
     font-family: Roboto;
     font-weight: bold;
+}
+.button img{
+    width: 4.5em;
+}
+.button p{
+    display: flex;
+    align-items: center;
+    margin-left: 3em;
 }
 .button:hover{
   background-color: rgb(2, 155, 134);
@@ -135,8 +142,11 @@ a{
     margin-top: 10%;
     margin-bottom: 5%;
 }
-#ef{
-    margin-bottom: 10%;
+#efII{
+    margin-bottom: 5%;
+}
+#efI{
+    margin-bottom: 5%;
 }
 @media (min-width: 1025px) {
     body{
@@ -153,11 +163,10 @@ a{
     #ok{
         width: 100%;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: nowrap;
         flex-direction: row;
         align-content: center;
-        justify-content: space-between;
     }
     #title {
         display: flex;
@@ -191,22 +200,13 @@ a{
         margin: 0;
     }
     #buttons {
-        width: 55%;
+        width: 33%;
         height: 30%;
-        display: flex;
-        flex-direction: row;
-        margin-left: 5%;
+        margin-left: 3%;
         font-size: 1.5em;
-        margin-top: -8%;
+        margin-top: -20%;
     }
     .button{
         height: 4.5em;
-    }
-    #em{
-        margin: 0;
-    }
-    #ef{
-        margin: 0;
-        margin-left: 2%;
     }
 }

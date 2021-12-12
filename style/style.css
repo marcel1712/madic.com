@@ -131,13 +131,6 @@ a{
     display: contents;
 }
 
-#em{
-    margin-top: 10%;
-    margin-bottom: 5%;
-}
-#ef{
-    margin-bottom: 10%;
-}
 @media (min-width: 1025px) {
     body{
         background-image: linear-gradient(to top, #21243f, #565FC9 , #565FC9);
@@ -199,14 +192,9 @@ a{
         font-size: 1.5em;
         margin-top: -8%;
     }
+
     .button{
         height: 4.5em;
-    }
-    #em{
-        margin: 0;
-    }
-    #ef{
-        margin: 0;
-        margin-left: 2%;
+        
     }
 }
