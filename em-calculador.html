@@ -26,12 +26,13 @@
                 <nav id="interdiciplinar" class="provas">
                     <p>Coloque sua nota da avaliação interdisciplinar:</p>
                     <input type="number" id="interdisciplinar-EM">
-                    <a onclick="CalculoQuantoFaltaEM()"><nav class="button-calcular">Quanto precisa</nav></a>
+                    <a onclick="CalculoQuantoFaltaAV2EM()"><nav class="button-calcular">Quanto precisa</nav></a>
                 </nav>
                 <nav id="trimestral" class="provas">
                     <p>Coloque sua nota da avaliação trimestral:</p>
                     <input type="number" id="trimestral-EM">
-                    <a onclick="calcularMediaProvaEM()"><nav class="button-calcular">Calcular Média</nav></a>
+                    <a onclick="CalculoQuantoFaltaAV1EM()"><nav class="button-calcular">Quanto precisa</nav></a>
+                    <a onclick="calcularMediaProvaEM()"><nav id="calcular-media">Calcular Média</nav></a>
                 </nav>
                 <nav id="media-provas-EM"></nav>
             </nav>
@@ -69,7 +70,7 @@
                 <p>Entrega e engajamento:</p>
                 <input type="number" id="av7-EM">
     
-                <a onclick="mediaTrimestreEM()"><nav id="calcular-media-tri">Calcular Média do Trimestre</nav></a>
+                <a onclick="mediaTrimestreEM()"><nav id="calcular-media">Calcular Média do Trimestre</nav></a>
             </nav>
         </section>
 

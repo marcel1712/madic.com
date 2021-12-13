@@ -90,7 +90,7 @@ main input{
     background-color: #3b428b;
     cursor: pointer;
 }
-#calcular-media-tri{
+#calcular-media{
     background-color: #01b199;
     color: white;
     width: 95%;
@@ -102,9 +102,9 @@ main input{
     align-content: center;
     border-radius: 0.5em;
     margin-bottom: 1em;
-    margin-top: 1em;
+    margin-top: 2em;
 }
-#calcular-media-tri:hover{
+#calcular-media:hover{
     background-color: rgb(0, 131, 113);
     cursor: pointer;
 }
