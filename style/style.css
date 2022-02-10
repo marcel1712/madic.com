@@ -20,7 +20,7 @@
     background-color: #00BFA6;
 }
 body{
-    background-image: linear-gradient(to top, #21243f, #565FC9 , #565FC9);
+    background-color: #565FC9;
     max-height: 100%;
     font-family: 'Roboto Slab', serif;
 }
@@ -134,7 +134,7 @@ a{
 
 @media (min-width: 1025px) {
     body{
-        background-image: linear-gradient(to top, #21243f, #565FC9 , #565FC9);
+        background-color: #565FC9;
         max-height: 100%;
         display: flex;
         flex-wrap: wrap;
