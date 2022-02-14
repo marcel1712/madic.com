@@ -1,25 +1,54 @@
-function CalculoQuantoFaltaEMAV2(){
+function CalculoQuantoFaltaEMInterdisciplinar(){
 
-    let interdisciplinarEM = Number(interdisciplinarEMInput.value);
+        let interdisciplinarEM = Number(interdisciplinarEMInput.value);
+        let trimestralEM = Number(trimestralEMInput.value);
+        let simuladoEM = Number(simuladoEMInput.value);
 
-    let quantoFaltaEM = (7 - (interdisciplinarEM * 0.4))/0.6;
+        verficarValoresInvalidos(trimestralEM);
+        verficarValoresInvalidos(interdisciplinarEM)
+        verficarValoresInvalidos(simuladoEM)
 
-    if(interdisciplinarEM > 10 || interdisciplinarEM < 0){
-        return alert('Valor invalido');
-    }else{
-        return alert(`Você precisa tirar ${quantoFaltaEM} na trimestral para passar`);
-    }
+        if(simuladoEM == 0){
+        
+            let quantoFaltaTrimestralEM = (7 - (interdisciplinarEM * 0.2))*1.25;
+            let quantoFaltaSimuladoEM = (7 - (interdisciplinarEM * 0.2))*1.25;
+            return alert(`${quantoFaltaTrimestralEM} e ${quantoFaltaSimuladoEM}`);
+        }else if(simuladoEM > 0){
+            
+            let quantoFaltaTrimestralEM = ((7 - ((simuladoEM * 0.2)+(interdisciplinarEM * 0.2)))*(7/4.2)+0.001);
+            return alert(`Você precisa tirar ${quantoFaltaTrimestralEM.toFixed(2)} na trimestral para passar na AV4`);
+        }
 }
 
-function CalculoQuantoFaltaAV1EM(){
+function CalculoQuantoFaltaEMSimulado(){
 
-    let trimestralEM = Number(trimestralEMInput.value);
+        let interdisciplinarEM = Number(interdisciplinarEMInput.value);
+        let trimestralEM = Number(trimestralEMInput.value);
+        let simuladoEM = Number(simuladoEMInput.value);
 
-    let quantoFaltaEM = (7 - (trimestralEM * 0.6))/0.4;
+        verficarValoresInvalidos(interdisciplinarEM)
+        verficarValoresInvalidos(simuladoEM)
 
-    if(trimestralEM > 10 || trimestralEM < 0){
-        return alert('Valor invalido');
-    }else{
-        return alert(`Você precisa tirar ${quantoFaltaEM} na interdisciplinar para passar`);
+        if(interdisciplinarEM == 0){
+        
+            let quantoFaltaTrimestralEM = (7 - (simuladoEM * 0.2))*1.25;
+            let quantoFaltaInterdisciplinarEM = (7 - (simuladoEM * 0.2))*1.25;
+            return alert(`${quantoFaltaTrimestralEM} e ${quantoFaltaInterdisciplinarEM}`);
+        }else if(interdisciplinarEM > 0){
+            
+            let quantoFaltaTrimestralEM = ((7 - ((simuladoEM * 0.2)+(interdisciplinarEM * 0.2)))*(7/4.2)+0.001);
+            return alert(`Você precisa tirar ${quantoFaltaTrimestralEM.toFixed(2)} na trimestral para passar na AV4`);
+        }
+}
+
+function CalculoQuantoFaltaEMTrimestral(){
+    
+}
+
+
+function verficarValoresInvalidos(valor){
+    if (valor > 10 || valor < 0){
+        alert ('Valor invalido');
+        return;
     }
 }

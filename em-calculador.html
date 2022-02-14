@@ -26,12 +26,19 @@
                 <nav id="interdiciplinar" class="provas">
                     <p>Coloque sua nota da avaliação interdisciplinar:</p>
                     <input type="number" id="interdisciplinar-EM">
-                    <a onclick="CalculoQuantoFaltaAV2EM()"><nav class="button-calcular">Quanto precisa</nav></a>
+                    <a onclick="CalculoQuantoFaltaEMInterdisciplinar()"><nav class="button-calcular">Quanto precisa</nav></a>
                 </nav>
+
+                <nav id="trimestral" class="provas">
+                    <p>Coloque sua nota do simulado:</p>
+                    <input type="number" id="simulado-EM">
+                    <a onclick="CalculoQuantoFaltaEMSimulado()"><nav class="button-calcular">Quanto precisa</nav></a>
+                </nav>
+
                 <nav id="trimestral" class="provas">
                     <p>Coloque sua nota da avaliação trimestral:</p>
                     <input type="number" id="trimestral-EM">
-                    <a onclick="CalculoQuantoFaltaAV1EM()"><nav class="button-calcular">Quanto precisa</nav></a>
+                    <a onclick="CalculoQuantoFaltaEMTrimestral()"><nav class="button-calcular">Quanto precisa</nav></a>
                     <a onclick="calcularMediaProvaEM()"><nav id="calcular-media">Calcular Média</nav></a>
                 </nav>
                 <nav id="media-provas-EM"></nav>
@@ -63,7 +70,7 @@
                       </datalist>
                   </nav>
 
-                <p>Média das provas | Nota de recuperação</p>
+                <p>Média das provas / Nota de recuperação</p>
                 <input type="number" id="av5-EM">
                 <p>Geekie Teste:</p>
                 <input type="number" id="av6-EM">

@@ -13,7 +13,7 @@ function mediaTrimestreEM(){
 
   if(verficarValoresEm(av5EM,av6EM,av7EM)){
     if(selecionarMateriaEm(materiasEm)){
-      
+
       calculoMediaGrupo1Em(av5EM,av6EM,av7EM)
     }else{
       calculoMediaGrupo2Em(av5EM,av6EM,av7EM)
@@ -37,7 +37,7 @@ function selecionarMateriaEm(materiasEm){
 //calculo da média grupo1
 function calculoMediaGrupo1Em(av5EM,av6EM,av7EM){
 
-  let mediaEm = ((av5EM * 70/100)+(av6EM * 15/100)+(av7EM * 15/100));
+  let mediaEm = ((av5EM * 0.7)+(av6EM * 0.15)+(av7EM * 0.15));
 
   verificarMediaEm(mediaEm);
   
@@ -48,7 +48,7 @@ function calculoMediaGrupo1Em(av5EM,av6EM,av7EM){
 
 //calculo da média grupo2
 function calculoMediaGrupo2Em(av5EM,av6EM,av7EM){
-  let mediaEm = ((av5EM * 60/100)+(av6EM * 30/100)+(av7EM * 10/100));
+  let mediaEm = ((av5EM * 0.6)+(av6EM * 0.3)+(av7EM * 0.1));
 
   verificarMediaEm(mediaEm);
   
