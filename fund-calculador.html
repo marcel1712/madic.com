@@ -20,9 +20,38 @@
         <section>
             <nav id="media-provas">
                 <nav id="title">
-                    <h1>Média do Ensino Fundamental</h1>
+                    <h1>Média do Ensino Fundamental II</h1>
                 </nav>
-                <nav id="interdiciplinar" class="provas">
+                <nav id="materias-fund">
+                    
+                    <input list="materia-fund" id="materiasFund">
+                    <datalist id="materia-fund">
+                      <option value="RIPT">
+                      <option value="Gramática">
+                      <option value="Matemática I">
+                      <option value="Matemática II">
+                      <option value="História">
+                      <option value="Geografia">
+                      <option value="Ciências">
+                      <option value="Química/Física">
+                      <option value="Inglês">
+                      <option value="Espanhol">
+                      <option value="Japonês">
+                      <option value="Filosofia">
+                      <option value="Arte">
+                      <option value="Empreendedorismo Maker">
+                      <option value="Música">
+                      <option value="Projeto de Vida e Inteligência Emocional">
+                      <option value="Educação Física">
+                      <option value="Oratória">
+                      <option value="Núcleos Formativos Eletivos"></option>
+                      <option value="STEM">
+                      <option value="Educação Ambiental"></option>
+                    </datalist>
+                    
+                </nav>
+                <nav id="forms-fund"></nav>
+                <!-- <nav id="interdiciplinar" class="provas">
                     <p>Coloque sua nota da avaliação interdisciplinar:</p>
                     <input type="number" id="interdisciplinar-FUND">
                     <a onclick="CalculoQuantoFaltaFUNDAV2()"><nav class="button-calcular">Quanto precisa</nav></a>
@@ -78,11 +107,12 @@
         </section>
             <section class="novasec"></section>
 
-        <nav id="media-trimestre-FUND"></nav>
+        <nav id="media-trimestre-FUND"></nav> -->
     </main>
 
     <script src="./js/media-prova-fund.js"></script>
     <script src="./js/quanto-falta-fund.js"></script>
     <script src="./js/media-trimestre-fund.js"></script>
+    <script src="./js/show-inputs-fund.js"></script>
 </body>
 </html>
