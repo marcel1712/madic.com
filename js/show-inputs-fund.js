@@ -33,9 +33,10 @@ materiasFundInput.addEventListener('input', function materia(){
                 <p>Entrega e engajamento:</p>
                 <input type="number" id="av7-FUND">
 
-                <a onclick="mediaTrimestreFUND()"><nav id="calcular-media">Calcular Média do Trimestre</nav></a>
+                <a onclick="mediaTrimestreGrupoIFUND()"><nav id="calcular-media">Calcular Média do Trimestre</nav></a>
             </nav>
             <script src="media-prova-fund.js"></script>
+            <script src="media-trimestre-fund.js"></script>
         `
     }else if(selecionarMateriaFUND(materiasFund) == 2){
         forms.innerHTML = `
@@ -59,14 +60,13 @@ materiasFundInput.addEventListener('input', function materia(){
             <nav>
                 <p>Média das provas / Nota de recuperação</p>
                 <input type="number" id="av5-FUND">
-                <p>Geekie Teste:</p>
-                <input type="number" id="av6-FUND">
                 <p>Entrega e engajamento:</p>
                 <input type="number" id="av7-FUND">
 
-                <a onclick="mediaTrimestreFUND()"><nav id="calcular-media">Calcular Média do Trimestre</nav></a>
+                <a onclick="mediaTrimestreGrupoIIFUND()"><nav id="calcular-media">Calcular Média do Trimestre</nav></a>
             </nav>
             <script src="media-prova-fund.js"></script>
+            <script src="media-trimestre-fund.js"></script>
         `
     }else if(selecionarMateriaFUND(materiasFund) == 3){
         forms.innerHTML = `
@@ -90,21 +90,23 @@ materiasFundInput.addEventListener('input', function materia(){
             </nav>
             <nav id="mediaProvasFUND"></nav>
             </nav>
-            <nav id="separacao"><nav></nav></nav>
-            <nav>
-                <p>Média das provas / Nota de recuperação</p>
-                <input type="number" id="av5-FUND">
-                <p>Geekie Teste:</p>
-                <input type="number" id="av6-FUND">
-                <p>Entrega e engajamento:</p>
-                <input type="number" id="av7-FUND">
-
-                <a onclick="mediaTrimestreFUND()"><nav id="calcular-media">Calcular Média do Trimestre</nav></a>
-            </nav>
             <script src="media-prova-fund.js"></script>
         `
     }else if(selecionarMateriaFUND(materiasFund) == 4){
-        forms.innerHTML = `<h1>grupo 4</h1>`
+        forms.innerHTML = `
+        <nav>
+        <nav id="interdiciplinar" class="provas">
+            <p>Coloque sua nota de participação e engajamento:</p>
+            <input type="number" id="participaçãoEngajamento-FUND">
+        </nav>
+        <nav id="trimestral" class="provas">
+            <p>Coloque sua nota de apresentação e entrega:</p>
+            <input type="number" id="apresentação-FUND">
+        <a onclick="calcularMediaProvaGrupoIVFUND()"><nav id="calcular-media">Calcular Média</nav></a>
+        </nav>
+        <nav id="mediaProvasFUND"></nav>
+        <script src="media-prova-fund.js"></script>
+        `
     }
 
 })
