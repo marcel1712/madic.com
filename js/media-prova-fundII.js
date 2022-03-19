@@ -26,7 +26,7 @@ function calcularMediaProvaGrupoIIFUND(){
 
     if(verificandoValorValido(interdisciplinarFUND,simuladoProficienciaFUND,trimestralFUND)){
         let mediaProvasFUND = interdisciplinarFUND * 0.3 + simuladoProficienciaFUND * 0.2 + trimestralFUND * 0.5;
-        verficandoSePassouFUND(mediaProvasFUND)
+        verficandoSePassouFUND(mediaProvasFUND);
     }
 }
 

@@ -115,7 +115,7 @@ function selecionarMateriaFUND(materiasFund){
 
     let grupo1 = ['RIPT','Gramática','Matemática I', 'Matemática II','História','Geografia','Ciências','Química/Física'];
     let grupo2 = ['Inglês','Espanhol','Japonês'];
-    let grupo3 = ['Educação Física','Arte','Empreendedorismo Maker','Projeto de Vida','Música','Oratória'];
+    let grupo3 = ['Educação Física','Artes','Empreendedorismo Maker','Projeto de Vida','Música','Oratória'];
     let grupo4 = ['Núcleos Eletivos Formativos', 'STEM', 'Educação Ambiental'];
 
     if(grupo1.indexOf(materiasFund) > -1){
