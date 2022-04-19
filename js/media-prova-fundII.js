@@ -1,7 +1,7 @@
 function calcularMediaProvaGrupoIFUND(){
 
     let interdisciplinarFUNDInput = document.querySelector('#interdisciplinar-FUND');
-    let PorAreaFUNDInput = document.querySelector('#PorArea-FUND')
+    let PorAreaFUNDInput = document.querySelector('#PorArea-FUND');
     let trimestralFUNDInput = document.querySelector('#trimestral-FUND');
 
     let interdisciplinarFUND = Number(interdisciplinarFUNDInput.value);
@@ -9,7 +9,7 @@ function calcularMediaProvaGrupoIFUND(){
     let trimestralFUND = Number(trimestralFUNDInput.value);
 
     if(verificandoValorValido(interdisciplinarFUND,PorAreaFUND,trimestralFUND)){
-        let mediaProvasFUND = interdisciplinarFUND * 0.3 + PorAreaFUND * 0.3 + trimestralFUND * 0.4;
+        let mediaProvasFUND = (interdisciplinarFUND * 0.3) + (PorAreaFUND * 0.3) + (trimestralFUND * 0.4);
         verficandoSePassouFUND(mediaProvasFUND);
     }
 }
@@ -65,14 +65,14 @@ function verficandoSePassouFUND(media){
     let navProvasFUND = document.querySelector('#mediaProvasFUND');
     let backgroundMain = document.querySelector('main');
     let backgroundHTML = document.querySelector('html');
-    if(media < 6.0){
+    if(media < 5.999){
         backgroundMain.style.background = '#F25757';
         backgroundHTML.style.background = '#F25757';
         navProvasFUND.innerHTML = `Sua média é ${media.toFixed(2)}`;
     }else{
         backgroundMain.style.background = '#3EFFAC';
         backgroundHTML.style.background = '#3EFFAC';
-        navProvasFUND.innerHTML = `Sua média é ${media.toFixed(2)}`
+        navProvasFUND.innerHTML = `Sua média é ${media.toFixed(2)}`;
     }
 }
 

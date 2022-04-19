@@ -12,14 +12,17 @@ materiasFundInput.addEventListener('input', function materia(){
                 <nav id="interdiciplinar" class="provas">
                     <p>Coloque sua nota da avaliação interdisciplinar:</p>
                     <input type="number" id="interdisciplinar-FUND">
+                    <a onclick="CalculoQuantoFaltaFUNDInterdisciplinar()"><nav class="button-calcular">Quanto precisa</nav></a>
                 </nav>
                 <nav>
                     <p>Coloque sua avaliações parciais por área:</p>
                     <input type="number" id="PorArea-FUND">
+                    <a onclick="CalculoQuantoFaltaFUNDPorArea()"><nav class="button-calcular">Quanto precisa</nav></a>
                 </nav>
                 <nav id="trimestral" class="provas">
                     <p>Coloque sua nota da avaliação trimestral:</p>
                     <input type="number" id="trimestral-FUND">
+                    <a onclick="CalculoQuantoFaltaFUNDTrimestral()"><nav class="button-calcular">Quanto precisa</nav></a>
                 <a onclick="calcularMediaProvaGrupoIFUND()"><nav id="calcular-media">Calcular Média</nav></a>
                 </nav>
                 <nav id="mediaProvasFUND"></nav>
