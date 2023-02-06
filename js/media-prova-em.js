@@ -20,11 +20,11 @@ function calcularMediaProvaGrupoIEM(){
         let backgroundMain = document.querySelector('main');
         let backgroundHTML = document.querySelector('html');
 
-        if(mediaProvasEm < 7.00){
+        if(mediaProvasEm < 6.00){
             backgroundMain.style.background = '#F25757';
             backgroundHTML.style.background = '#F25757';
             navProvasEM.innerHTML = `Sua média é ${mediaProvasEm.toFixed(2)}`;
-        }else if(mediaProvasEm >= 7.00){
+        }else if(mediaProvasEm >= 6.00){
             backgroundMain.style.background = '#3EFFAC';
             backgroundHTML.style.background = '#3EFFAC';
             navProvasEM.innerHTML = `Sua média é ${mediaProvasEm.toFixed(2)}`;
@@ -54,11 +54,11 @@ function calcularMediaProvaGrupoIIEM(){
         let backgroundMain = document.querySelector('main');
         let backgroundHTML = document.querySelector('html');
 
-        if(mediaProvasEm < 7.00){
+        if(mediaProvasEm < 6.00){
             backgroundMain.style.background = '#F25757';
             backgroundHTML.style.background = '#F25757';
             navProvasEM.innerHTML = `Sua média é ${mediaProvasEm.toFixed(2)}`;
-        }else if(mediaProvasEm >= 7.00){
+        }else if(mediaProvasEm >= 6.00){
             backgroundMain.style.background = '#3EFFAC';
             backgroundHTML.style.background = '#3EFFAC';
             navProvasEM.innerHTML = `Sua média é ${mediaProvasEm.toFixed(2)}`;
