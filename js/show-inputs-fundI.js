@@ -1,6 +1,6 @@
 var materiasFundInput = document.querySelector('#materiasFund');
 
-materiasFundInput.addEventListener('input', function materia(){
+materiasFundInput.addEventListener('input', () =>{
 
     var materiasFund = materiasFundInput.value;
 
@@ -51,16 +51,16 @@ materiasFundInput.addEventListener('input', function materia(){
             <script src="media-prova-fundI.js"></script>
         `
     }
-
-    function selecionarMateriaFUND(materiasFund){
-
-        let grupo1 = ['História','Geografia','Ciências', 'Educação Física','Artes','Matemática','Português','Inglês','Espanhol','Japonês'];
-        let grupo2 = ['Xadrez','Teatro','Música','Taikô','Soroban','Projeto de Vida','Maker','STEM','Educação Ambiental'];
-
-        if(grupo1.indexOf(materiasFund) > -1){
-            return 1
-        }else if(grupo2.indexOf(materiasFund) > -1){
-            return 2
-        }
-    }
 })
+
+function selecionarMateriaFUND(materiasFund){
+
+    const grupo1 = ['História','Geografia','Ciências', 'Educação Física','Artes','Matemática','Português','Inglês','Espanhol','Japonês'];
+    const grupo2 = ['Xadrez','Teatro','Música','Taikô','Soroban','Projeto de Vida','Maker','STEM','Educação Ambiental'];
+
+    if(grupo1.indexOf(materiasFund) > -1){
+        return 1
+    }else if(grupo2.indexOf(materiasFund) > -1){
+        return 2
+    }
+}

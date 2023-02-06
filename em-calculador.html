@@ -23,32 +23,10 @@
                 <nav id="title">
                     <h1>Média do Ensino Médio</h1>
                 </nav>
-                <nav id="interdiciplinar" class="provas">
-                    <p>Coloque sua nota da avaliação interdisciplinar/simulado externo(3ºEM):</p>
-                    <input type="number" id="interdisciplinar-EM">
-                    <a onclick="CalculoQuantoFaltaEMInterdisciplinar()"><nav class="button-calcular">Quanto precisa</nav></a>
-                </nav>
-
-                <nav id="trimestral" class="provas">
-                    <p>Coloque sua nota do simulado personalizado:</p>
-                    <input type="number" id="simulado-EM">
-                    <a onclick="CalculoQuantoFaltaEMSimulado()"><nav class="button-calcular">Quanto precisa</nav></a>
-                </nav>
-
-                <nav id="trimestral" class="provas">
-                    <p>Coloque sua nota da avaliação trimestral:</p>
-                    <input type="number" id="trimestral-EM">
-                    <a onclick="CalculoQuantoFaltaEMTrimestral()"><nav class="button-calcular">Quanto precisa</nav></a>
-                    <a onclick="calcularMediaProvaEM()"><nav id="calcular-media">Calcular Média</nav></a>
-                </nav>
-                <nav id="media-provas-EM"></nav>
-            </nav>
-            <nav id="separacao"><nav></nav></nav>
-            <nav id="media-trimestre">
 
                 <nav id="nav-materias-em">
-                    <p>Matérias</p>
-                    <input list="materia" name="browser" id="materias-em">
+                    <p id="materia-title">Matéria:</p>
+                    <input list="materia" id="materiasEm">
                       <datalist id="materia">
                         <option value="Gramática">
                         <option value="Literatura">
@@ -70,23 +48,16 @@
                       </datalist>
                   </nav>
 
-                <p>Média das provas / Nota de recuperação:</p>
-                <input type="number" id="av5-EM">
-                <p>Geekie Teste:</p>
-                <input type="number" id="av6-EM">
-                <p>Entrega e engajamento:</p>
-                <input type="number" id="av7-EM">
-    
-                <a onclick="mediaTrimestreEM()"><nav id="calcular-media">Calcular Média do Trimestre</nav></a>
-            </nav>
+                <nav id="forms-em"></nav>
         </section>
-
+        
         <section class="novasec"></section>
 
         <nav id="media-trimestre-em"></nav>
     </main>
-    <script src="./js/media-trimestre-em.js"></script>
+    <script src="./js/show-inputs-em.js"></script>
     <script src="./js/media-prova-em.js"></script>
+    <script src="./js/media-trimestre-em.js"></script>
     <script src="./js/quanto-falta-em.js"></script>
 </body>
 </html>

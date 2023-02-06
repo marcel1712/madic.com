@@ -1,36 +1,41 @@
-function mediaTrimestreGrupoIFUND(){
-  let newSec = document.querySelector('.novasec');
+function mediaTrimestreGrupoIFUNDII(){
+  let newsec = document.querySelector('.novasec');
 
-  let mediaProvasFUNDInput = document.querySelector('#av5-FUND');
-  let geekieTesteFUNDInput = document.querySelector('#av6-FUND');
-  let entregaEngajamentoFUNDInput = document.querySelector('#av7-FUND');
+  let av5FUNDIIInput = document.querySelector('#av5-FUNDII');
+  let av6FUNDIIInput = document.querySelector('#av6-FUNDII');
+  let av7FUNDIIInput = document.querySelector('#av7-FUNDII');
+  let av8FUNDIIInput = document.querySelector('#av8-FUNDII');
 
-  let mediaProvasFUND = Number(mediaProvasFUNDInput.value);
-  let geekieTesteFUND = Number(geekieTesteFUNDInput.value);
-  let entregaEngajamentoFUND = Number(entregaEngajamentoFUNDInput.value);
+  let av5FUNDII = Number(av5FUNDIIInput.value);
+  let av6FUNDII = Number(av6FUNDIIInput.value);
+  let av7FUNDII = Number(av7FUNDIIInput.value);
+  let av8FUNDII = Number(av8FUNDIIInput.value);
 
-  let mediaTrimetreFUND = mediaProvasFUND * 0.7+geekieTesteFUND*0.15+entregaEngajamentoFUND*0.15
-  if(verficarValoresFund(mediaProvasFUND,geekieTesteFUND,entregaEngajamentoFUND)){
-    verificarMediaFund(mediaTrimetreFUND);
-    newSec.style.display = 'block';
-    newSec.textContent = `Sua média do trimestre é ${mediaTrimetreFUND.toFixed(2)}`;
+  let mediaTrimetreFUNDII = ((av5FUNDII * 0.7)+(av6FUNDII*0.1)+(av7FUNDII*0.1)+(av8FUNDII*0.1))
+  if(verficarValoresFund(av5FUNDII,av6FUNDII,av7FUNDII,av8FUNDII)){
+    verificarMediaFund(mediaTrimetreFUNDII);
+    newsec.style.display = 'block';
+    newsec.textContent = `Sua média do trimestre é ${mediaTrimetreFUNDII.toFixed(2)}`;
+    newsec.scrollIntoView({behavior: "smooth"});
   }
 }
 
 function mediaTrimestreGrupoIIFUND(){
-  let newSec = document.querySelector('.novasec');
+  let newsec = document.querySelector('.novasec');
 
-  let mediaProvasFUNDInput = document.querySelector('#av5-FUND');
-  let entregaEngajamentoFUNDInput = document.querySelector('#av7-FUND');
+  let av5FUNDIIInput = document.querySelector('#av5-FUNDII');
+  let av6FUNDIIInput = document.querySelector('#av6-FUNDII');
+  let av7FUNDIIInput = document.querySelector('#av7-FUNDII');
 
-  let mediaProvasFUND = Number(mediaProvasFUNDInput.value);
-  let entregaEngajamentoFUND = Number(entregaEngajamentoFUNDInput.value);
+  let av5FUNDII = Number(av5FUNDIIInput.value);
+  let av6FUNDII = Number(av6FUNDIIInput.value);
+  let av7FUNDII = Number(av7FUNDIIInput.value);
 
-  let mediaTrimetreFUND = mediaProvasFUND * 0.85+entregaEngajamentoFUND*0.15
-  if(verficarValoresFund(mediaProvasFUND,entregaEngajamentoFUND)){
-    verificarMediaFund(mediaTrimetreFUND);
-    newSec.style.display = 'block';
-    newSec.textContent = `Sua média do trimestre é ${mediaTrimetreFUND.toFixed(2)}`;
+  let mediaTrimetreFUNDII = ((av5FUNDII * 0.7)+(av6FUNDII*0.2)+(av7FUNDII*0.1))
+  if(verficarValoresFund(av5FUNDII,av6FUNDII,av7FUNDII)){
+    verificarMediaFund(mediaTrimetreFUNDII);
+    newsec.style.display = 'block';
+    newsec.textContent = `Sua média do trimestre é ${mediaTrimetreFUND.toFixed(2)}`;
   }
 }
  
@@ -39,7 +44,7 @@ function verificarMediaFund(mediaFUND){
     let backgroundMain = document.querySelector('main');
     let backgroundHTML = document.querySelector('html');
  
-    if(mediaFUND >= 6){
+    if(mediaFUND.toFixed(2) >= 6){
         backgroundMain.style.background = '#3EFFAC';
         backgroundHTML.style.background = '#3EFFAC';
     }else{
@@ -49,8 +54,8 @@ function verificarMediaFund(mediaFUND){
 }
  
  
-function verficarValoresFund(av5FUND,av6funav5FUND,av7funav5FUND){
-  if(av5FUND,av6funav5FUND,av7funav5FUND > 10 || av5FUND,av6funav5FUND,av7funav5FUND < 0){
+function verficarValoresFund(av5FUND,av6FUND,av7FUND,av8FUND){
+  if(av5FUND,av6FUND,av6FUND,av8FUND > 10 || av5FUND,av6FUND,av7FUND,av8FUND < 0){
     alert('Valor Inválido')
   }else{
     return true

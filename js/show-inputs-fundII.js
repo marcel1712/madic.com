@@ -9,62 +9,57 @@ materiasFundInput.addEventListener('input', function materia(){
     if(selecionarMateriaFUND(materiasFund) == 1){
         forms.innerHTML = `
             <nav>
-                <nav id="interdiciplinar" class="provas">
-                    <p>Coloque sua nota da avaliação interdisciplinar:</p>
-                    <input type="number" id="interdisciplinar-FUND">
-                    <a onclick="CalculoQuantoFaltaFUNDInterdisciplinar()"><nav class="button-calcular">Quanto precisa</nav></a>
+                <nav id="interdisciplinar" class="provas">
+                    <p>Coloque sua nota da avaliação <br>parcial por área:</p>
+                    <input type="number" id="av1-FUNDII">
+                    <a onclick="CalculoQuantoFaltaGrupoIFUNDII()"><nav class="button-calcular">Quanto precisa</nav></a>
                 </nav>
                 <nav>
-                    <p>Coloque sua avaliações parciais por área:</p>
-                    <input type="number" id="PorArea-FUND">
-                    <a onclick="CalculoQuantoFaltaFUNDPorArea()"><nav class="button-calcular">Quanto precisa</nav></a>
+                    <p>Coloque sua nota da <br>avaliação trimestral:</p>
+                    <input type="number" id="av2-FUNDII">
+                    <a onclick="CalculoQuantoFaltaGrupoIFUNDII()"><nav class="button-calcular">Quanto precisa</nav></a>
                 </nav>
-                <nav id="trimestral" class="provas">
-                    <p>Coloque sua nota da avaliação trimestral:</p>
-                    <input type="number" id="trimestral-FUND">
-                    <a onclick="CalculoQuantoFaltaFUNDTrimestral()"><nav class="button-calcular">Quanto precisa</nav></a>
-                <a onclick="calcularMediaProvaGrupoIFUND()"><nav id="calcular-media">Calcular Média</nav></a>
-                </nav>
+                <a onclick="calcularMediaProvaGrupoIFUND()"><nav id="calcular-media">Calcular Média da AV4</nav></a>
                 <nav id="mediaProvasFUND"></nav>
             </nav>
             <nav id="separacao"><nav></nav></nav>
             <nav>
-                <p>Média das provas / Nota de recuperação</p>
-                <input type="number" id="av5-FUND">
+                <p>Nota da AV4 / Nota de recuperação:</p>
+                <input type="number" id="av5-FUNDII">
+                <p>Nota da interdisciplinar:</p>
+                <input type="number" id="av6-FUNDII">
                 <p>Geekie Teste:</p>
-                <input type="number" id="av6-FUND">
+                <input type="number" id="av7-FUNDII">
                 <p>Entrega e engajamento:</p>
-                <input type="number" id="av7-FUND">
+                <input type="number" id="av8-FUNDII">
 
-                <a onclick="mediaTrimestreGrupoIFUND()"><nav id="calcular-media">Calcular Média do Trimestre</nav></a>
+                <a onclick="mediaTrimestreGrupoIFUNDII()"><nav id="calcular-media">Calcular Média do Trimestre</nav></a>
             </nav>
-            <script src="media-prova-fund.js"></script>
-            <script src="media-trimestre-fund.js"></script>
         `
     }else if(selecionarMateriaFUND(materiasFund) == 2){
         forms.innerHTML = `
             <nav>
             <nav id="interdiciplinar" class="provas">
-                <p>Coloque sua nota da avaliação interdisciplinar:</p>
-                <input type="number" id="interdisciplinar-FUND">
+                <p>Coloque sua nota do <br>simulados proficiência:</p>
+                <input type="number" id="av1-FUNDII">
+                <a onclick="CalculoQuantoFaltaGrupoIFUNDII()"><nav class="button-calcular">Quanto precisa</nav></a>
             </nav>
             <nav>
-                <p>Coloque sua nota do simulado de proficiência:</p>
-                <input type="number" id="simuladoProficiencia-FUND">
+                <p>Coloque sua nota da <br>avaliação trimestral:</p>
+                <input type="number" id="av2-FUNDII">
+                <a onclick="CalculoQuantoFaltaGrupoIFUNDII()"><nav class="button-calcular">Quanto precisa</nav></a>
             </nav>
-            <nav id="trimestral" class="provas">
-                <p>Coloque sua nota da avaliação trimestral:</p>
-                <input type="number" id="trimestral-FUND">
-            <a onclick="calcularMediaProvaGrupoIIFUND()"><nav id="calcular-media">Calcular Média</nav></a>
-            </nav>
+            <a onclick="calcularMediaProvaGrupoIIFUND()"><nav id="calcular-media">Calcular Média da AV3</nav></a>
             <nav id="mediaProvasFUND"></nav>
             </nav>
             <nav id="separacao"><nav></nav></nav>
             <nav>
-                <p>Média das provas / Nota de recuperação</p>
-                <input type="number" id="av5-FUND">
+                <p>Nota da AV3 / Nota de recuperação</p>
+                <input type="number" id="av5-FUNDII">
+                <p>Nota da interdisciplinar </p>
+                <input type="number" id="av6-FUNDII">
                 <p>Entrega e engajamento:</p>
-                <input type="number" id="av7-FUND">
+                <input type="number" id="av7-FUNDII">
 
                 <a onclick="mediaTrimestreGrupoIIFUND()"><nav id="calcular-media">Calcular Média do Trimestre</nav></a>
             </nav>
@@ -76,21 +71,17 @@ materiasFundInput.addEventListener('input', function materia(){
             <nav>
             <nav id="interdiciplinar" class="provas">
                 <p>Coloque sua nota da avaliação interdisciplinar:</p>
-                <input type="number" id="interdisciplinar-FUND">
+                <input type="number" id="av1-FUNDII">
             </nav>
             <nav>
                 <p>Coloque sua nota da avaliação processual:</p>
-                <input type="number" id="simuladoProficiencia-FUND">
-            </nav>
-            <nav>
-                <p>Coloque sua nota da Autoavaliação / autodiagnóstico e plano de Ação:</p>
-                <input type="number" id="autoavaliação-FUND">
+                <input type="number" id="av2-FUNDII">
             </nav>
             <nav id="trimestral" class="provas">
                 <p>Coloque sua nota das atividades avaliativas e/ou projeto:</p>
-                <input type="number" id="atividadeavaliativas-FUND">
-            <a onclick="calcularMediaProvaGrupoIIIFUND()"><nav id="calcular-media">Calcular Média</nav></a>
+                <input type="number" id="av3-FUNDIII">
             </nav>
+            <a onclick="calcularMediaProvaGrupoIIIFUND()"><nav id="calcular-media">Calcular Média</nav></a>
             <nav id="mediaProvasFUND"></nav>
             </nav>
             <script src="media-prova-fund.js"></script>
@@ -100,13 +91,13 @@ materiasFundInput.addEventListener('input', function materia(){
         <nav>
         <nav id="interdiciplinar" class="provas">
             <p>Coloque sua nota de participação e engajamento:</p>
-            <input type="number" id="participaçãoEngajamento-FUND">
+            <input type="number" id="av1-FUNDII">
         </nav>
         <nav id="trimestral" class="provas">
             <p>Coloque sua nota de apresentação e entrega:</p>
-            <input type="number" id="apresentação-FUND">
-        <a onclick="calcularMediaProvaGrupoIVFUND()"><nav id="calcular-media">Calcular Média</nav></a>
+            <input type="number" id="av2-FUNDII">
         </nav>
+        <a onclick="calcularMediaProvaGrupoIVFUND()"><nav id="calcular-media">Calcular Média</nav></a>
         <nav id="mediaProvasFUND"></nav>
         <script src="media-prova-fund.js"></script>
         `

@@ -1,7 +1,4 @@
 function mediaTrimestreEM(){
-  
-  let materiasEmInput = document.querySelector('#materias-em');
-  let materiasEm = materiasEmInput.value;
 
   let av5EMInput = document.querySelector('#av5-EM');
   let av6EMInput = document.querySelector('#av6-EM');
@@ -12,40 +9,24 @@ function mediaTrimestreEM(){
   let av7EM = Number(av7EMInput.value);
 
   if(verficarValoresEm(av5EM,av6EM,av7EM)){
-    if(selecionarMateriaEm(materiasEm)){
-
-      calculoMediaGrupo1Em(av5EM,av6EM,av7EM)
-    }else{
-      calculoMediaGrupo2Em(av5EM,av6EM,av7EM)
-    }
-  }
-}
-
-//verficação da matéria
-function selecionarMateriaEm(materiasEm){
-  let materias1Em = ['Gramática','Literatura','Redação','Álgebra','Geometria','História','Geografia','Biologia','Química','Física','Inglês','Sociologia','Filosofia'];
-
-  let materias2Em = ['Arte','Educação Física','Projeto de Vida','Trilhas'];
-
-  if(materias1Em.indexOf(materiasEm) > -1){
-    return true;
-  }else{
-    return false;
+    calculoMediaGrupo1Em(av5EM,av6EM,av7EM)
   }
 }
 
 //calculo da média grupo1
 function calculoMediaGrupo1Em(av5EM,av6EM,av7EM){
 
-  let mediaEm = ((av5EM * 0.7)+(av6EM * 0.15)+(av7EM * 0.15));
+  let mediaEm = ((av5EM.toFixed(2) * 0.7)+(av6EM.toFixed(2) * 0.15)+(av7EM.toFixed(2) * 0.15));
 
   verificarMediaEm(mediaEm);
   
   let newsec = document.querySelector('.novasec');
   newsec.style.display = 'block';
   newsec.textContent = `Sua média do trimestre é ${mediaEm.toFixed(2)}`;
+  newsec.scrollIntoView({behavior: "smooth"});
 }
 
+//nao esta sendo mais utilizado
 //calculo da média grupo2
 function calculoMediaGrupo2Em(av5EM,av6EM,av7EM){
   let mediaEm = ((av5EM * 0.6)+(av6EM * 0.3)+(av7EM * 0.1));
@@ -63,10 +44,10 @@ function verificarMediaEm(mediaEm){
   let backgroundMain = document.querySelector('main');
   let backgroundHTML = document.querySelector('html');
 
-  if(mediaEm >= 7){
+  if(mediaEm.toFixed(2) >= 6){
     backgroundMain.style.background = '#3EFFAC';
     backgroundHTML.style.background = '#3EFFAC';
-  }else{
+  }else if(mediaEm.toFixed(2) < 6){
     backgroundMain.style.background = '#F25757';
     backgroundHTML.style.background = '#F25757';
   }
